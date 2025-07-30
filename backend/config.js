@@ -1,6 +1,5 @@
-export const PORT = 5555;
+import dotenv from 'dotenv';
+dotenv.config();
 
-export const mongoDBURL = 'mongodb://localhost:27017/bookstore';
-
-// Please create a free database for yourself.
-// This database will be deleted after tutorial
+export const PORT = process.env.PORT || 5000;
+export const mongoDBURL = process.env.MONGO_URI;
