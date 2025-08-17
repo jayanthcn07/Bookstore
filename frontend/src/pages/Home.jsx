@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${import.meta.env.VITE_API_BASE}/books`)
+      .get(`${import.meta.env.VITE_API_URI}/books`)
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
